@@ -41,7 +41,11 @@ struct Obj {
   template<typename O> const Type& thisObj(const O& o) const {return obj();}
 };
 
-template<typename... OO> using Def=Parts<OO...,Still<Nil>>;
-
+template<typename API,typename... OO> using Def=Parts<OO...,API>;
 //so that we can define a new API like this:
-//template<typename... OO> using MachineDef=Def<OO...>;
+//template<typename... OO> using MachineDef=Def<MyAPI,OO...>;
+// sugar for:
+//template<typename... OO> using MachineDef=Parts<OO...,MyAPI>;
+//note that MyAPI can be a composition
+//template<typename... OO> using MachineDef=Parts<OO...,MyAPI<Nil>>;
+//that allows custom hierarchy
