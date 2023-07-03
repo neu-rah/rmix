@@ -1,0 +1,23 @@
+{
+  "name": "rmix",
+  "keywords": "C++ API Template Tools utility",
+  "description": "C++ API Template",
+  "license": "MIT",
+  "authors":
+{
+    "name": "Rui Azevedo",
+    "email": "ruihfazevedo@gmail.com"
+},
+"repository":
+  {
+    "type": "git",
+    "url": "https://github.com/neu-rah/rmix",
+    "branch": "master"
+  },
+  "version":"0.1.0",
+  "frameworks": "*",
+  "platforms": "*",
+  "examples": [
+    "[Ee]xamples/*/*.cpp"
+  ]
+}
